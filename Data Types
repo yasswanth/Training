@@ -1,0 +1,39 @@
+Data Types:
+         There are two types of data types is there.
+Primitive Data Type.
+1.Numbers:integers,floats.
+2.String: Stream of Characters enclosed in qouts(Single qouts,Double qouts, backtic qouts).
+Backtics:
+  let a=6
+       {
+        let a=3
+        console.log("hi +a+a")
+
+       }
+       console.log(`hi +${a+a}`)
+Output: 
+hi +a+a
+hi12
+3.Booleans: True or False.
+4.Null: Empty value.
+5.Undfined:A declared Variable with out no value.
+Non-Primitive Data Type.
+String Concatination:
+Example1:
+let a=5
+       let b='3.5'
+       console.log(a+b)
+Output:
+5 3.5
+Example2:
+let name='Yaswanth'
+       let age=18
+       console.log(`I am ${name} . My age is ${age}. `)
+Output:
+I am Yaswanth. My age is 18.
+Example3:
+let a='Yash'
+       let b='cse'
+       console.log(`React Js = ${a+b}`)
+Output:
+React Js =Yashcse
