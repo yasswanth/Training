@@ -1,0 +1,93 @@
+Java Script Operators:
+Division operator:
+let a=10
+       let b=2
+       document.write(a/b)
+Output:
+5
+Modulo:
+let a=10
+       let b=2
+       document.write(a%b)
+Output:
+0
+Multiplication:
+let a=10
+       let b=2
+       document.write(a*b)
+Output:
+20
+Addition:(+)
+Subraction:(-)
+Asignment Operator:(=)
+Example:
+let a=10
+       let b=6
+       a+=10
+       b-=10
+       document.write(a)
+       document.write(b)
+Output:
+16
+-4
+Logical Operator:
+And(&&)
+Or(||)
+Not(!)
+Example:
+ let a=10
+       let b=6
+       a+=10
+       b-=10
+       document.write(a>b && b>10,"<br>")
+       document.write(b<a || a>20,"<br>")
+       document.write(a!=b,"<br>")
+Output:
+False
+True
+True
+Relational Operators:
+<
+>
+<=
+>=
+!=
+==
+===
+Example:
+ let a=10
+        let b=7
+        document.write(a>b,"<br>")
+        document.write(a<b,"<br>")
+        document.write(a==b,"<br>")
+        document.write(a!=b,"<br>")
+        document.write(a>=b,"<br>")
+        document.write(a<=b,"<br>")
+        document.write(a===b,"<br>")
+        
+Output:
+True
+False
+False
+True
+True
+False
+False
+Conditional Operator(Ternary Operator (?)):
+Syntax:
+Condition ? Expresion1:Expresion2
+Example:
+let a=10
+        let b=3
+        let r=(a<b)? "YASH":"MALLI"
+        document.write(r)
+
+Output:
+MALLI
+Window Methods:
+alert():Notifications
+alert("YASH")
+
+prompt():User input
+let name=prompt("Enter a name")
+        document.write(name)
