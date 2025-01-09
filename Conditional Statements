@@ -1,0 +1,63 @@
+Conditional Statements:
+To make the set instructions execute only when the given condition is True.
+Used to decide whether the code has to be executed or skip based on the given condition.
+Block of code : set of instructions.
+         It will execute only when the given condition is true. 
+If:-if the condition is true it will executed.
+If-else
+Else if
+Switch
+Ternary Operator
+Example1:
+let a=10
+       let b=4
+       if(a<b){
+        document.write("Hello Malli....")
+       }
+       else{
+        document.write("Hello Yaswanth....")
+       }
+Output:
+Hello Yaswanth…
+Example2:
+let a=10
+       let b=4
+       let c=3
+       if(a<b){
+        document.write("Hello Malli....")
+       }
+       else if(a>b || b>c){
+        document.write("Hello CSE")
+       }
+
+       else{
+        document.write("Hello Yaswanth....")
+       }
+Output:
+Hello CSE
+Example3:
+let a=prompt("Enter Your Age:")
+       let name=prompt("Enter Your name:")
+       if(a<18){
+        document.write(`${name} You are not aligible..`)
+       }else{
+        document.write(`${name} You are aligible...`)
+       }
+Output:
+
+
+Yaswanth You are aligible... 
+Example4:
+let a=prompt("Enter person1 Score:")
+       let b=prompt("Enter person2 Score")
+       let sum=a+b
+       if((a>300 || b>300) && sum>500){
+        document.write("We are aligible for the team up")
+       }else{
+        document.write("We are not aligible to team up")
+       }
+
+Output:
+a=400
+b=200
+We are aligible for the team up.       
