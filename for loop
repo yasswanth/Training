@@ -1,0 +1,40 @@
+Loops:
+       Loops is used to execute the code in several times.
+For loop.
+        Syntax:
+                for(initilization;condition;increment(or)dicriment){}
+Example:
+    for(let i=0;i<10;i++){
+        document.write(i,"<br>")
+      }
+         Output:
+ 0
+1
+2
+3
+4
+5
+6
+7
+8
+9
+Example:
+ for(let i=3;i<=9;i=i+2){
+        document.write(i+3,"<br>")
+      }
+Output:
+Initially it is 3 then coming to the print statement 3+3=6
+Next it will be incriment to 3+2=5.next conidition will checks 5<=9 . Then after it will going to print the 5+3=8.
+Next it will be incriment to 5+2=.7next conidition will checks 7<=9 . Then after it will going to print the 7+3=10.
+Next it will be incriment to 7+2=9.next conidition will checks 9<=9 . Then after it will going to print the 9+3=12.
+Next it will be incriment to 9+2=11.next conidition will checks 11<=9.The above condition is false.Now loop is terminating.
+Output:
+6
+8
+10
+12
+
+For in
+For of
+While.
+Do while.
