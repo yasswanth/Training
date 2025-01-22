@@ -1,0 +1,51 @@
+Example:
+for(let i=1;i<=10;i=i+2){
+            if(i>5){
+                continue
+            }
+            document.write(i+1,"<br>")
+        }
+Output:
+Step1:   l=1 ; 1<=10 true ; 1>5 false; print(1+1=2) ;1+2=3
+Step2: 3<=10 true ; 3>5 false ; print(3+1=4);3+2=5
+Step3:5<=10 true; 5>4 false;print(5+1=6);5+2=7
+Step4:7<=10 true;7>5 true;continue; 7+2=9
+Step5:9<=10 true;9>5 true;continue;9+2=11
+Step4:11<=10 false; Loop is terminating.
+Output:
+2
+4
+6
+Example:
+ for(let i=1;i<=4;i++){
+            document.write(i,"<br>")
+            for(let j=1;j<=4;j++){
+                document.write(j,)
+            }
+            document.write("<br>")
+        }
+Output:
+1
+1234
+2
+1234
+3
+1234
+4
+1234
+Pattrens:
+ for(let i=0;i<=7;i++){
+            for(let j=0;j<i;j++){
+                document.write("*")
+            }
+            document.write("<br>")
+            
+        }
+Output:
+*
+**
+***
+****
+*****
+******
+*******
