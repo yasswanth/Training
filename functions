@@ -1,0 +1,34 @@
+Functions:
+    A function is reusable code.We can use the function any Where in program.
+Syntax:
+Function function_name(parameters){
+}
+ Example:
+ function yash(){
+        document.write("Hello This is the Function.....")
+       }
+       yash()// this is function calling
+Output:
+Hello This is the Function..…
+Example:
+ function yash(){
+        document.write("Hello This is the Function.....","<br>")
+       }
+       yash()
+       document.write("Hello yash","<br>")
+       yash()
+Output:
+Hello This is the Function.....
+Hello yash
+Hello This is the Function..…
+Example: Adding two numbers using function.
+function yash(a,b){
+        document.write(a+b)
+      }
+      let a=parseInt(prompt("Enter the 1st number:"))
+      let b=parseInt(prompt("Enter the 2nd number:"))
+      yash(a,b)
+Output:
+A=5
+B=6
+11
