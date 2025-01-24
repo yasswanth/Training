@@ -1,0 +1,34 @@
+Example:
+Arrow functions with out parameters.
+Let c=()=>{
+Console.log("hii yash”)
+}
+c();  ## functoin calling
+Example: Arrow Functions With Parameters.
+let c=(a,b)=>{
+        document.write(a+b,"<br>")
+        }
+        c(10,20);
+        c(30,40);
+Output:
+30
+70
+Example: Using ternary Operator:
+let age=18
+        let welcome=(age<18)?()=>document.write("eligible"):
+          ()=>document.write("not Eligible");
+        welcome();
+Output:
+Not Eligible.
+Example: Using asynchronous function:
+  document.write("hello This My First Task...","<br>")
+       setTimeout(()=>{
+        document.write("This Is My Secound Task...","<br>")
+       },3000);
+       document.write("This is My 3rd Task...","<br>")
+    
+Output
+hello This My First Task...
+This is My 3rd Task…
+After 3 Sec it will prints
+This Is My Secound Task…
