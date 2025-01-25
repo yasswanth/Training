@@ -1,0 +1,41 @@
+CallBack Function:
+function mainfunction(callback){
+         document.write("hello....","<br>")
+         callback();
+      }
+      function callbackfunction(){
+         document.write("yash.....")
+      }
+      mainfunction(callbackfunction);
+Output:
+hello....
+yash.....
+Example:Asynchronous callback with setTimeOut.
+  function yash(name,callback){
+
+         setTimeout(()=>{
+            document.write(`hello ${name} good marning....`)
+         },2000);
+         callback();
+      }
+      function greet(){
+         document.write("Good morning...")
+      }
+      yash("Yaswanth",greet);
+    
+Output:
+Good Morning..
+hello Yaswanth good marning.…
+Example:Using Anonymous functions..
+ function main(name,callback){
+            document.write("hiii..."+name,"<br>")
+            callback();
+         }
+         let yash=function(){
+            document.write("yash....")
+         }
+         main("yash",yash);
+
+Output:
+hiii...yash
+yash.…
