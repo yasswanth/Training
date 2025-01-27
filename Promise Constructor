@@ -1,0 +1,88 @@
+Promise:
+A promise is a special javascript object that  represents the eventual completion(or falure) of an asynchrous operation.
+Three states.
+1.Pending: The initial State , the promise is still wating fotr the operation to finish.
+2.Fulfilld:The operation completed Succeccfully.
+3.Rejected:The operation faild.
+Exp:
+To create a promise new Promise();
+The promise constructor takes a two parameters: 
+Resolve:to mark as the promise is successful.
+Reject:to mark it as fail.
+Handling:
+.then() method is called when the promise is fulfilled.
+.catch()method is called when the promise is rejected.
+Syntax: Creating the promise.
+ let myPromise =new Promise((resolve,reject)=>{
+            let succes= true
+            if(succes){
+            resolve("The operation was successfully")
+            }
+            else{
+            rejet("The operation faild")
+            }
+         });
+            myPromise
+            .then(result=>{
+               document.write(result)
+            })
+            .catch(error=>{
+               document.write(error)
+            })
+            
+
+Output:
+The operation was successfully
+Example:
+let promise=new Promise((reslove,reject)=>{
+            reslove(5)
+           });
+           promise
+            .then(result=>{
+               document.write(result,"<br>")
+               return result*2
+            })
+            .then(result=>{
+               document.write(result,"<br>")
+               return result+3
+            })
+            .then(result=>{
+               document.write(result)
+              
+            })
+            .catch(error=>{
+               document.write(error)
+            })
+
+
+Output
+5
+10
+13
+Example: Using setTimeOut();
+let promise=new Promise((reslove,reject)=>{
+            reslove(5)
+           });
+           promise
+          
+            .then(result=>{
+               document.write(result,"<br>")
+               return result+3
+            })
+            .then(result=>{
+
+               setTimeout(()=>{
+                  document.write(result)
+                  return result*5
+               },2000);
+            
+            })
+            
+           
+            .catch(error=>{
+               document.write(error)
+            })
+
+Output:
+5 
+Then After 8
