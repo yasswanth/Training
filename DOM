@@ -1,0 +1,70 @@
+DOM(Document Object Model):
+1.It is a programming interface in web development that allows us to interact and mamipulate the html documents.
+2.When the webpages is loaded, the browser create the DOM of the webpage.
+3.When an html file is loaded into the browser . The javascript cannot understand the html document directly.
+4.DOM: is basically the representation of same html document but in the form of a tree-like structure composed of objects
+5.HTML dom it allows javascript to access and modify all elements in html document.
+KeyPoints:
+6.Structure:the DOM represents the structure of html document as tree;Each node in a tree represents the elements, an atribute,text
+7.Manipulate:using js, you can interact with elements we can modify ,add, remove elements
+Change Style:
+8.Eventhandling:
+9.W3C-World Wide Web Cosortium.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+In Dom all html elements are defined objects 
+Example:
+ <style>
+        .a{
+            color: red;
+            text-align: center;
+           
+
+        }
+        .b{
+            color: green;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="a">yaswanth</h1>
+    <h1 class="a">malli</h1>
+    <h1 class="a">ravi</h1>
+    <h1 class="a">gani</h1>
+    <h1 class="b">nani</h1>
+    <h1 class="b">gopi</h1>
+    <h1 class="b">anwar</h1>
+    <h1 class="b">venky</h1>
+    
+</body>
+Output:
+yaswanth
+malli
+ravi
+gani
+Nani
+gopi
+anwar
+Venky
+Example: getByelemetid(),getByClassname();
+<script>
+       let x= document.getElementById("h")
+       document.write(x,"<br>")
+       let y=document.getElementsByClassName("b")
+       document.write(y)
+    </script>
+    
+Output:
+[object HTMLHeadingElement]
+[object HTMLCollection]
