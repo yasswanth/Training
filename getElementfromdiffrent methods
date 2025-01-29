@@ -1,0 +1,32 @@
+Example: getByelemetid(),getByClassname();
+<script>
+       let x= document.getElementById("h")
+       document.write(x,"<br>")
+       let y=document.getElementsByClassName("b")
+       document.write(y)
+    </script>
+    
+Output:
+[object HTMLHeadingElement]
+[object HTMLCollection]
+Example:getElementsByTagName();
+let x=document.getElementsByTagName("a")
+       document.write(x,"<br>")
+       for(let i=0;i<=x.length;i++){
+        document.write(x[i],"<br>")
+       }
+
+Output:
+Yaswanth
+Example:Creating html tags using the javascript.
+const arr=["yash","malli","ravi"]
+      
+      for(let i=0;i<=arr.length;i++){
+        let tt=document.createElement("h2")
+        tt.className="b"
+        tt.textContent=arr[i]
+        console.log(tt)
+      }
+
+Output:
+Creating the 3 elements in console.
