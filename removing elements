@@ -1,0 +1,11 @@
+ Example:Removing elements in html tags like <ul><li></li></ul>. by using javascript code.
+const ul=document.querySelector("ul")
+      const list=document.querySelectorAll("li")
+      console.log(ul)
+      console.log(list)
+      for( const i of list){
+        console.log(`removing:${i.textContent}`)
+        ul.removeChild(i)
+        console.log(i)
+      }
+Output:Output will printing in console.
