@@ -1,0 +1,53 @@
+
+InsertBefore:
+ <div id="a">
+      <h1 id="h">ravi</h1>
+      <h1 id="r">sumanth</h1>
+    </div>
+ let n=document.createElement("h1")
+      n.textContent="yaswanth"
+      
+      let h=document.getElementById("a")
+      let r=document.getElementById("r")
+      h.insertBefore(n,r)
+      
+Output:
+ravi
+Yaswanth
+Sumanth
+Example:
+   <h1 id="h">ravi</h1>
+        <h1 id="r">sumanth</h1>
+      </div>
+   <script>
+    let a=document.createElement("h1")
+    a.textContent="taswan"
+    let p=document.getElementById("a")
+    let c=document.getElementById("r")
+    p.insertBefore(a,c)
+
+    /// to insert malli before ravi
+    let b=document.createElement("h1")
+    b.textContent="hdds"
+    let p2=document.getElementById("a")
+    let c2=document.getElementById("h")
+    p2.insertBefore(b,c2)
+   </script>  
+Output:
+hdds
+ravi
+taswan
+Sumanth
+Example:
+ <div id="p">
+    <h1 id="a">yaswanth</h1>
+    <h1 id="b">manoj</h1>
+   </div>
+   <script>
+    let parent=document.getElementById("p")
+    let Child=document.getElementById("a")
+    parent.removeChild(Child)
+
+   </script>
+Output:
+manoj
