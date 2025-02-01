@@ -1,0 +1,53 @@
+Example:
+  <script>
+    let age=parseInt(prompt("enter age:"));
+    let person=prompt("enter person is pass or fail:");
+    let citizen=prompt("peroson is citizen or not:")
+    if(age>=18){
+        if(citizen=="yes"){
+            document.write("eligible to vote....")
+        }
+        else if(person="pass"&&citizen!="yes"){
+            document.write("eligible to vote...")
+        }
+        else{
+            document.write("not eligible to vote...")
+        }
+    }
+    else{
+        document.write("not eligible to vote...")
+    }
+    
+   </script>
+Output:
+ Example:
+<script>
+    let spend=parseInt(prompt("enter amount:"));
+    let premium=prompt("enter person having the preimum or not:");
+    if(spend>=100){
+           let discount=spend*0.2
+            let amount=spend-discount;
+        document.write("The customer geting the 20% discount.total price:"+amount,"<br>")
+        if(premium=="yes"){
+            discount=spend*0.25
+            amount=spend-discount;
+            document.write("extra 5% discount....."+amount,"<br>")
+        }
+    }
+    else if(spend>=50 &&spend<100){
+        let discount=spend*0.1
+        let amount=spend-discount;
+        document.write("The customer geting the 10% discount.total price:"+amount,"<br>")
+        if(preimum=="yes"){
+            discount=spend*0.15
+            amount=spend-discount;
+            document.write("extra 5% discount....."+amount,"<br>")
+        }
+    }
+    else{
+        document.write("on your spend amount is not geting the any discount...")
+        
+    }
+Output:
+The customer geting the 20% discount.total price:200
+extra 5% discount.....187.5
