@@ -1,0 +1,24 @@
+Creating element  by using js:
+Document.createElement(“h1”)
+Syntax:
+React.createElement(type,props)
+Type=tangname(h1,p,div)
+Prop=id,className,Onclick
+ReactDOM.createRoot()
+ReactDOM.render()
+Example:
+import React from "react";
+function yash(){
+const b = React.createElement(
+    "h1",
+    { id: "id" },
+    "I am Yaswanth.."
+);
+const e = document.getElementById("yash"); 
+const yash = ReactDOM.createRoot(e);
+yash.render(b); 
+}
+export default yash;
+JSX:
+JavaScript XML
+It is syntax extension for js here we write the html code and this will be translated into js.babel.
