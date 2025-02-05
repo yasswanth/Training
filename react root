@@ -1,0 +1,62 @@
+ <script>
+            const b=React.createElement('h1',{id:a},"i am yaswanth..")
+            const e=document.getElementById("a")
+            const root=ReactDOM.createRoot(e)
+            root.render(b)
+        </script>
+
+JSX:
+JavaScript XML
+It is syntax extension for js here we write the html code and this will be translated into js.babel.
+-It is a syntax extension for javaScript.
+-jsx allow us to write html tages must be closed
+-jsx compiles the html code to js.
+<div id="a"> </div>
+        <script type="text/lable">
+            const ele=<h1 className="aa">wwlcome to jx</h1>
+            const e=document.getElmentById("a")
+            const root=ReactDOM.createRoot(e)
+            root.render(element)
+        </script>
+</body>
+
+Conditional Renedring:
+ <div id="root"></div>
+        <scriptdiv id="root"></div>
+         <script type="text/babel">
+          const App=()=>{
+            const isloggedin=true;
+            return(
+                <div>
+                    {isloggedin?(<h1> welcome back,user</h1>):(<h1>please,log in</h1>)}
+                    {isloggedin&&<h1>you have a new notification</h1>}
+                </div>
+            )
+          }
+          const root=ReactDOM.createRoot(document.getElementById('root'))
+          root.render(<App/>)
+
+        </script>
+
+Output:
+welcome back,user
+you have a new notification
+Function:
+Using a function call:
+--You can use a function call with the jsx expresions..
+<div id="root"></div>
+         <script type="text/babel">
+          function getGreeting(name){
+            return  `hello good morning,${name}`
+          }
+          function Greeting(){
+            const name="yaswanth"
+            return <h1>{getGreeting(name)}</h1>
+          }
+          const root=ReactDOM.createRoot(document.getElementById("root"))
+          root.render(<Greeting/>)
+            
+        
+        </script>
+Output:
+hello good morning,yaswanth
