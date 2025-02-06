@@ -1,0 +1,73 @@
+Using React :
+App.js:
+import React from "react";
+import './App.css';
+// const Welcome = () => {
+//   return <h1 className="message"> Hello Yaswanth</h1>;
+// };
+function App() {
+  return (
+    <div className="App">
+      {/* <Welcome /> */}
+    </div>
+  );
+}
+
+export default App;
+
+App.css:
+/* App.css */
+.App {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f0f0f0;
+}
+
+.message {
+  font-size: 2rem;
+  color: #333;
+  font-weight: bold;
+  text-align: center;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease-in-out; /* Smooth transition */
+}
+
+/* Hover Effect */
+.message:hover {
+  background-color: #007bff; /* Change background color on hover */
+  color: white; /* Change text color on hover */
+  transform: scale(1.1); /* Slightly enlarge the element */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Add a deeper shadow */
+}
+
+
+
+
+By Using Another component:
+Welocome.js:
+import React from "react";
+const Welcome=(props)=>{
+    const{name,greeting}=props
+    return(
+        <h1 className="message">{greeting},{name}</h1>
+    )
+
+}
+export default Welcome;
+App.js:
+import React from "react";
+import Welcome from "./Welcom";
+function App() {
+  return (
+    <div style={{textAlign:"center"}}className="App">
+         <Welcome name="yash" greeting="hello"></Welcome>
+    </div>
+  );
+}
+
+export default App;
