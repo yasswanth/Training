@@ -1,0 +1,79 @@
+
+Using the Conditional rendering:
+App.js:
+import React from "react";
+import Greeting from "./Greeting";
+function App() {
+  const isLoggedIn=true;
+  return (
+    <div style={{textAlign:"center",color:"black",backgroundColor:"green",marginLeft:"30px",marginRight:"30px",boxshadow:"0px,4px,8px,black",borderRadius:"25px"}}className="App">
+         <Greeting isLoggedIn={isLoggedIn} ></Greeting>
+    </div>
+  );
+}
+
+export default App;
+
+
+
+
+Greeting.js:
+import React from "react";
+function Greeting({isLoggedIn}){
+    
+    if(isLoggedIn){
+        return<h1>Welcome Back..</h1>
+    }
+    else{
+        return <h1>Please Login</h1>
+    }
+}
+export default Greeting;
+Output:
+Welcome Back..
+Map(): elements in array function will be applied to all elements
+Const d=[1,2,3,4]
+<ul>
+{d.map((d1,index)=>(
+<li key={index}>{fruit}</li>))}
+</ul>
+Example:
+FruitsList.js:
+import React from "react";
+import './App.css';
+const FruitsList=()=>{
+    const fruits=["apple","bannan","mango","graps"];
+    return(
+        <div className="fruit">
+            <h1>Fruits List</h1>
+            <ul>
+                {fruits.map((fruit,index)=>(
+                    <li key={index}>{fruit}</li>
+
+                ))}
+            </ul>
+        </div>
+    )
+}
+export default FruitsList;
+App.js:
+import React from "react";
+import FruitsList from "./FruitsList";
+import './App.css';
+
+function App() {
+ 
+  return (
+    <div style={{textAlign:"center",color:"black",backgroundColor:"gray",marginLeft:"30px",marginRight:"30px",borderRadius:"25px"}}className="App">
+         <FruitsList></FruitsList>
+    </div>
+  );
+}
+
+export default App;
+Output:
+Fruits List
+apple
+bannan
+mango
+graps
