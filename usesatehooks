@@ -1,0 +1,88 @@
+
+UseStateHooks:
+State:
+Is an essential part in reat because it allows components to be dynamic, interactive and capable of responding to user or change over time.
+There are two types of usestatehookes in javaScript.
+1.UseState().
+  useState() allowes you to add state to functional componentes. 
+  Syntax:
+       Const [state,setstate]=usestate(initial value);
+      State=current value.
+      Setstate=updating value .
+Example:
+import React, { useState } from "react";
+import "./App.css"; 
+function App() {
+  const [count, setCount] = useState(0);
+
+  return (
+    <div className="App">
+      <p className="counter">{count}</p>
+      <button className="btn" onClick={() => setCount(count + 1)}>
+        Increment
+      </button>
+      <button className="btn" onClick={() => setCount(count - 1)}>
+        Decrement
+      </button>
+    </div>
+  );
+}
+
+export default App;
+
+Css:
+.App {
+  text-align: center;
+  color: black;
+  background-color: rgb(247, 237, 237);
+  margin: 30px;
+  padding: 20px;
+  border-radius: 25px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 20px 0;
+  animation: pop 0.3s ease-in-out;
+}
+
+@keyframes pop {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Buttons */
+.btn {
+  font-size: 1rem;
+  padding: 10px 20px;
+  margin: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #95c2f2;
+  color: white;
+  cursor: pointer;
+  transition: transform 0.2s ease, background-color 0.3s;
+}
+
+/* Button hover */
+.btn:hover {
+  background-color: #5a8cc2;
+}
+
+/* Button click effect */
+.btn:active {
+  transform: scale(0.9);
+}
+
+Output:
+5
+Increment   Decrement
+2.UseEffect().
