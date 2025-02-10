@@ -1,0 +1,47 @@
+What is a Data Type?
+A data type is a classification that specifies which type of value a variable can hold in a programming language. It defines the operations that can be performed on the data, as well as the amount of memory required for storage.
+
+Data types can be broadly categorized into two types:
+
+Primitive Data Types
+Non-Primitive Data Types
+1. Primitive Data Types
+Primitive data types are the basic building blocks of data handling in programming. These are predefined by the language and provide fundamental operations.
+
+Examples of Primitive Data Types
+Integer (int) – Holds whole numbers.
+Example: int age = 25;
+Floating Point (float, double) – Holds decimal numbers.
+Example: float price = 12.99;
+Character (char) – Holds a single character.
+Example: char grade = 'A';
+Boolean (bool) – Holds true or false.
+Example: bool isStudent = true;
+
+
+2. Non-Primitive Data Types
+Non-primitive data types (also called reference types) are more complex and can store multiple values or references to memory locations.
+
+Examples of Non-Primitive Data Types
+String – A sequence of characters.
+Example: String name = "Alice";
+Array – A collection of elements of the same data type.
+Example: int numbers[] = {1, 2, 3, 4};
+Class and Objects – User-defined data structures that can have multiple properties and methods.
+Example:
+java
+Copy
+Edit
+class Car {
+    String brand = "Toyota";
+    int year = 2022;
+}
+Interface – A blueprint for a class that defines methods without implementation.
+Collections (List, Set, Map, etc.) – Data structures that hold multiple elements dynamically.
+Example (in Java):
+java
+Copy
+Edit
+List<Integer> list = new ArrayList<>();
+list.add(10);
+list.add(20);
