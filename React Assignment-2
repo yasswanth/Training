@@ -1,0 +1,40 @@
+import React from "react";
+import ProfileCard from "/ProfileCard";
+
+const App = () => {
+  return (
+    <div className="app">
+      <ProfileCard 
+        name="Yaswanth" 
+        greeting="Hello! Nice to meet you." 
+        imageSrc="/images/user1.png" 
+      />
+      <ProfileCard 
+        name="Malli" 
+        greeting="Hey there! Have a great day." 
+        imageSrc="/images/user2.png" 
+      />
+      <ProfileCard 
+        name="Gani" 
+        greeting="Welcome to my profile!" 
+        imageSrc="/images/user3.png" 
+      />
+    </div>
+  );
+};
+
+export default App;
+import React from "react";
+import "./styles.css"; // Import CSS for styling
+
+const ProfileCard = ({ name, greeting, imageSrc }) => {
+  return (
+    <div className="profile-card">
+      <img src={imageSrc} alt={name} className="profile-img" />
+      <h2 className="profile-name">{name}</h2>
+      <p className="profile-greeting">{greeting}</p>
+    </div>
+  );
+};
+
+export default ProfileCard;
