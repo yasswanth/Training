@@ -1,0 +1,49 @@
+React Home:
+-it is a HOC is not React hook.
+-It will stop unnecessary -rendering of functional components of its props.
+-it will improvr thr performance of the functional conmponents.
+Using Memo:
+import React, { useState } from "react";
+import Childa from "./Childa";
+import Childb from "./Childb";
+
+const App = () => {
+  const [count, setCount] = useState(0);
+
+  const increment = () => {
+    setCount(count + 1);
+  };
+
+  return (
+    <div textalign="center">
+      <Childa />
+      <Childb count={count} increment={increment} />
+    </div>
+  );
+};
+
+export default App;
+
+import React, { memo } from "react";
+
+const Childa = () => {
+  console.log("Child A");
+  return <h1>This is Child A Component</h1>;
+};
+
+export default memo(Childa);
+
+import React from "react";
+
+const Childb = ({ count, increment }) => {
+  console.log("Child B")
+  return (
+    <div>
+      <h1>This is Child B Component</h1>
+      <h2>Count: {count}</h2>
+      <button onClick={increment}>Increment</button>
+    </div>
+  );
+};
+
+export default Childb;
