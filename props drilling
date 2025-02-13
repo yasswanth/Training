@@ -1,0 +1,63 @@
+
+Props drilling:
+import React from "react";
+import "./App.css"; 
+
+function App() {
+  const data = "I am K. Yaswanth";
+  return (
+    <div className="container">
+      <User1 data={data} />
+    </div>
+  );
+}
+
+function User1({ data }) {
+  return <User2 data={data} />;
+}
+
+function User2({ data }) {
+  return <User3 data={data} />;
+}
+
+function User3({ data }) {
+  return <User4 data={data} />;
+}
+
+function User4({ data }) {
+  return <div className="text">{data}</div>;
+}
+
+export default App;
+
+body {
+  margin: 0;
+  padding: 0;
+  background: radial-gradient(circle, #111, #000);
+  overflow: hidden;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  text-align: center;
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  text-shadow: 0 0 10px #fff, 0 0 20px #0ff, 0 0 30px #00f;
+  animation: flicker 1.5s infinite alternate;
+}
+
+@keyframes flicker {
+  0% {
+    text-shadow: 0 0 10px #fff, 0 0 20px #0ff, 0 0 30px #00f;
+  }
+  100% {
+    text-shadow: 0 0 20px #fff, 0 0 30px #0ff, 0 0 40px #00f;
+  }
+}
+
+Output:
+I am K. Yaswanth
