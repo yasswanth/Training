@@ -1,0 +1,165 @@
+import React, { createContext, useContext, useReducer, useState, useMemo } from "react";
+import "./App.css";
+
+// Define actions
+const ADD_ITEM = "ADD_ITEM";
+const REMOVE_ITEM = "REMOVE_ITEM";
+const CLEAR_ITEMS = "CLEAR_ITEMS";
+
+// Initial state
+const initialState = { items: [] };
+
+// Reducer function
+function listReducer(state, action) {
+  switch (action.type) {
+    case ADD_ITEM:
+      return { items: [...state.items, action.payload] };
+    case REMOVE_ITEM:
+      return { items: state.items.filter((_, index) => index !== action.payload) };
+    case CLEAR_ITEMS:
+      return { items: [] };
+    default:
+      return state;
+  }
+}
+
+// Create context
+const ListContext = createContext();
+
+// Context provider
+function ListProvider({ children }) {
+  const [state, dispatch] = useReducer(listReducer, initialState);
+  return (
+    <ListContext.Provider value={{ state, dispatch }}>{children}</ListContext.Provider>
+  );
+}
+
+// Custom hook to use context
+function useList() {
+  return useContext(ListContext);
+}
+
+// Item List Component
+function ItemList() {
+  const { state, dispatch } = useList();
+
+  // Memoized list to optimize rendering
+  const memoizedList = useMemo(() => state.items, [state.items]);
+
+  return (
+    <div className="card">
+      <h2>Item List ({memoizedList.length})</h2>
+      <ul>
+        {memoizedList.map((item, index) => (
+          <li key={index} className="list-item">
+            {item}
+            <button className="remove-button" onClick={() => dispatch({ type: REMOVE_ITEM, payload: index })}>
+              Remove
+            </button>
+          </li>
+        ))}
+      </ul>
+      {memoizedList.length > 0 && (
+        <button className="clear-button" onClick={() => dispatch({ type: CLEAR_ITEMS })}>
+          Remove All
+        </button>
+      )}
+    </div>
+  );
+}
+
+// Add Item Component
+function AddItem() {
+  const { dispatch } = useList();
+  const [input, setInput] = useState("");
+
+  const handleAddItem = () => {
+    if (input.trim() !== "") {
+      dispatch({ type: ADD_ITEM, payload: input });
+      setInput("");
+    }
+  };
+
+  return (
+    <div className="input-container">
+      <input value={input} onChange={(e) => setInput(e.target.value)} placeholder="Enter item" />
+      <button className="add-button" onClick={handleAddItem}>Add</button>
+    </div>
+  );
+}
+
+// Main App Component
+export default function App() {
+  return (
+    <ListProvider>
+      <div className="app-container">
+        <h1>Item Manager</h1>
+        <AddItem />
+        <ItemList />
+      </div>
+    </ListProvider>
+  );
+}
+App.css
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(135deg, #1e3c72, #2a5298);
+  font-family: Arial, sans-serif;
+  color: white;
+  margin: 0;
+}
+
+.container {
+  text-align: center;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(10px);
+}
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 1.5rem;
+  margin: 10px 0;
+}
+
+.apple-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.apple-image {
+  width: 50px;
+  height: auto;
+}
+
+button {
+  background: #ff9800;
+  border: none;
+  padding: 10px 20px;
+  margin: 10px;
+  font-size: 1rem;
+  font-weight: bold;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+  box-shadow: 0 0 10px rgba(255, 152, 0, 0.7);
+}
+
+button:hover {
+  background: #e68900;
+  box-shadow: 0 0 20px rgba(255, 152, 0, 1);
+  transform: scale(1.1);
+}
