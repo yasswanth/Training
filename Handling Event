@@ -1,0 +1,95 @@
+Event Handling in React:
+--Event handling in react is how you 
+
+
+OnHandle Change:
+import React, { useState } from "react";
+import "./App.css";
+function App(){
+  const [count, setCount] = useState(0);
+  const handlechange=(event)=>{
+    setCount(event.target.value);
+  }
+  return (
+    <div>
+      <input type="number" value={count} onChange={handlechange} />
+      <p>Count: {count}</p>
+    </div>
+  );
+}
+export default App;
+
+OnMouse Hover:
+
+import React, { useState } from "react";
+import "./App.css";
+
+function App() {
+  const [count, setCount] = useState(0);
+  const [bgColor, setBgColor] = useState("white");
+  const [message, setMessage] = useState("Hover over the box!");
+
+  const handleChange = (event) => {
+    setCount(Number(event.target.value)); // Ensuring the value is a number
+  };
+
+  const incrementCount = () => {
+    setCount((prevCount) => prevCount + 1);
+  };
+
+  const handleMouseEnter = () => {
+    setBgColor("lightblue"); 
+    setMessage("Mouse is over me!");// Change color on hover
+  };
+
+  const handleMouseLeave = () => {
+    setBgColor("white");
+    setMessage("Hover over the box!"); // Revert to default when mouse leaves
+  };
+
+  return (
+    <div
+      className="container"
+      style={{ backgroundColor: bgColor, padding: "20px", borderRadius: "8px" }}
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
+    
+    >
+      <input type="number" value={count} onChange={handleChange} />
+      <p>Count: {count}</p>
+      <button onClick={incrementCount}>Increment</button>
+      <p>{message}</p>
+    </div>
+  );
+}
+
+export default App;
+
+OnKeyDown:
+import { useState } from "react";
+import "./App.css";
+function KeyEventComponent() {
+  const [message, setMessage] = useState("");
+
+  const handleKeyDown = (event) => {
+    if (event.key === "Enter") {
+      setMessage("You pressed Enter!");
+    } else if (event.key === "Escape") {
+      setMessage("You pressed Escape!");
+    }
+  };
+  
+
+  return (
+    <div>
+      <input
+        type="text"
+        placeholder="Press a key..."
+        onKeyDown={handleKeyDown}
+      />
+      <p color="black" >{message}</p>
+    </div>
+  );
+}
+
+export default KeyEventComponent;
