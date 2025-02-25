@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>grid</title>
+        <style>
+            .parent{
+                height:100vh;
+                display:grid;
+                grid-template-rows: 15% 70% 15%;
+                grid-template-columns: 15% 70% 15%;
+            }
+            .header{
+                background-color: #e91b8c;
+
+            }
+            .aside{
+                   background-color: #2fb43c;
+            }
+            .menu{
+                background-color: #cd1717;
+
+            }
+            .rightmenu{
+                background-color: #2698c2;
+
+            }
+            .footer{
+                background-color: #f0f0f0;
+
+            }
+        </style>
+    </head>
+    <body>
+        <div class="parent">
+            <div class="header">Header</div>
+            <div class="aside">Aside</div>
+            <div class="main">Main</div>
+            <div class="rightmenu">Right Menu</div>
+            <div class="footer">Footer</div>
+        </div>
+    </body>
+</html>
